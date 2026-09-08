@@ -76,23 +76,82 @@ dog
 
 ## 2. Type Casting ✔️
 
+There are several different data types we can work with in python. Some of the most commonly used are strings, integers, floating point numbers and booleans.
+
+### Strings:
+Text values are what we call 'strings' and can be stored in double or single quotes
+```python
+number_1 = "1"
+```
+
+Number values can be whole numbers ('Integers' or 'int'), or Decimals ('Floating point' or 'float')
+
+```python
+number_1 = 1
+number_2 = 2.1
+```
+
+There are also 'boolean' values or 'bool' which are a true or false statement
+
+```python
+working_hard = True
+hardly_working = False
+```
+We can cast values to become another value type with type casting. 
+
+```python
+int()
+float()
+str()
+```
+By casting the values as a differnt type, we can do things like change numbers to strings or strings to numbers
 ```python
 number_1 = "1"
 number_2 = "2"
-print(int(number_1))
+print(int(number_1)) #will convert to whole number as 'int' for integer
 print(int(number_2))
-print(str(number_1))
+print(float(number_1)) #will convert to floating point number as 'float'
+print(float(number_2))
+print(str(number_1)) #will convert to text value as 'str' for string
 print(str(number_2))
+
 ```
+note that while the 1 and 2 printed first look the same as the 1 and 2 printed at the end but the difference is the first are of type 'int' while the last are of type 'str' and strings cannot be inerpreted as numbers
 
 #### Output:
 
 ```
 1
 2
+1.0
+2.0
 1
 2
 ```
+We will see in this example that not everything is treated equally when type casting
+```python
+animal_1 = "cat"
+animal_2 = "dog"
+print(int(animal_1))
+print(int(animal_2))
+print(float(animal_2))
+print(float(animal_2))
+print(str(animal_1))
+print(str(animal_2))
+
+```
+#### Output:
+
+```
+Traceback (most recent call last):
+  File "c:\Users\Owner\dev\python\python_roadmap\test.py", line 3, in <module>
+    print(int(animal_1))
+          ~~~^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'cat'
+```
+here we will see that the string cannot be converted to an integer because cat is not a number, whereas in the previous example, even tho we had a string of "1" we still are able to cast it as an integer because 1 is a castable number.
+
+
 ## 3. User Input ✔️
 
 ## 4. Math and Arithmetic ✔️
@@ -275,8 +334,28 @@ hello
 ```
 
 ## 13. Nested Loops ✔️
+```python
+suits = ("♥️","♦️","♣️","♠️")
+ranks = ("2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A")
+for rank in ranks:
+    for suit in  suits:
+        print(f"{rank}{suit}", end = " ")
+```
+
+#### Output:
+
+```
+2♥️ 2♦️ 2♣️ 2♠️ 3♥️ 3♦️ 3♣️ 3♠️ 4♥️ 4♦️ 4♣️ 4♠️ 5♥️ 5♦️ 5♣️ 5♠️ 6♥️ 6♦️ 6♣️ 6♠️ 7♥️ 7♦️ 7♣️ 7♠️ 8♥️ 8♦️ 8♣️ 8♠️ 9♥️ 9♦️ 9♣️ 9♠️ 10♥️ 10♦️ 10♣️ 10♠️ J♥️ J♦️ J♣️ J♠️ Q♥️ Q♦️ Q♣️ Q♠️ K♥️ K♦️ K♣️ K♠️ A♥️ A♦️ A♣️ A♠️ 
+```
+
 
 ## 14. Lists, Sets, and Tuples ✔️
+
+```python
+my_list = []
+my_set = {}
+my_tuple = ()
+```
 
 ## 15. 2D Collections ✔️
 
@@ -444,7 +523,7 @@ Accuracy: 66%
 
 ## 23. Memebership Operators ✔️
 
-## 24. List Comprehensions 🟥
+## 24. List Comprehensions ✔️
 
 ## 25. match-case Statements ✔️
 
