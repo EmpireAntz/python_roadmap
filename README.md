@@ -1,6 +1,7 @@
 # Python Roadmap
 
 ## Table of Contents
+
 - [1. Variables](#1-variables-️)
 - [2. Type Casting](#2-type-casting-️)
 - [3. User Input](#3-user-input-️)
@@ -21,14 +22,14 @@
 - [18. Functions](#18-functions-️)
 - [19. Default Arguments](#19-default-arguments-)
 - [20. Keyword Arguments](#20-keyword-arguments-)
-- [21. *args and **kwargs](#21-args-and-kwargs-)
+- [21. \*args and \*\*kwargs](#21-args-and-kwargs-)
 - [22. Iterables](#22-iterables-️)
 - [23. Memebership Operators](#23-memebership-operators-️)
 - [24. List Comprehensions](#24-list-comprehensions-)
 - [25. Match-Case Statements](#25-match-case-statements-️)
 - [26. Modules](#26-modules-️)
 - [27. Scope Resolution](#27-scope-resolution-️)
-- [28. if __name__ =="__main__"](#28-if-name--main-️)
+- [28. if **name** =="**main**"](#28-if-name--main-️)
 - [29. Python Object Oriented Programming](#29-python-object-oriented-programming-️)
 - [30. Class Variables](#30-class-variables-️)
 - [31. Inheritance](#31-inheritance-️)
@@ -50,8 +51,6 @@
 - [47. Request API Data](#47-request-api-data)
 - [48. PyQt5](#48-pyqt5)
 
-
-
 ## 1. Variables ✔️
 
 Variables are how values are stored, think of it as a container that holds something. In this example, animal_1 is the variable and "cat" is the value stored in that variable while the variable animal_2 stores the value of "dog".
@@ -62,7 +61,6 @@ animal_1 = "cat"
 animal_2 = "dog"
 print(animal_1)
 print(animal_2)
-
 ```
 
 We use the print() function to print things to the terminal window. In this case we want to print our animal_1 and animal_2 to see the values they are holding. We pass in the values we want to print between the (). When we run the program we will see this as the output in the terminal.
@@ -79,10 +77,14 @@ dog
 There are several different data types we can work with in python. Some of the most commonly used are strings, integers, floating point numbers and booleans.
 
 ### Strings:
+
 Text values are what we call 'strings' and can be stored in double or single quotes
+
 ```python
 number_1 = "1"
 ```
+
+### Ints and Floats:
 
 Number values can be whole numbers ('Integers' or 'int'), or Decimals ('Floating point' or 'float')
 
@@ -91,20 +93,25 @@ number_1 = 1
 number_2 = 2.1
 ```
 
+### Bools:
+
 There are also 'boolean' values or 'bool' which are a true or false statement
 
 ```python
 working_hard = True
 hardly_working = False
 ```
-We can cast values to become another value type with type casting. 
+
+We can cast values to become another value type with type casting.
 
 ```python
 int()
 float()
 str()
 ```
+
 By casting the values as a differnt type, we can do things like change numbers to strings or strings to numbers
+
 ```python
 number_1 = "1"
 number_2 = "2"
@@ -114,8 +121,8 @@ print(float(number_1)) #will convert to floating point number as 'float'
 print(float(number_2))
 print(str(number_1)) #will convert to text value as 'str' for string
 print(str(number_2))
-
 ```
+
 note that while the 1 and 2 printed first look the same as the 1 and 2 printed at the end but the difference is the first are of type 'int' while the last are of type 'str' and strings cannot be inerpreted as numbers
 
 #### Output:
@@ -128,7 +135,9 @@ note that while the 1 and 2 printed first look the same as the 1 and 2 printed a
 1
 2
 ```
+
 We will see in this example that not everything is treated equally when type casting
+
 ```python
 animal_1 = "cat"
 animal_2 = "dog"
@@ -138,8 +147,8 @@ print(float(animal_2))
 print(float(animal_2))
 print(str(animal_1))
 print(str(animal_2))
-
 ```
+
 #### Output:
 
 ```
@@ -149,10 +158,23 @@ Traceback (most recent call last):
           ~~~^^^^^^^^^^
 ValueError: invalid literal for int() with base 10: 'cat'
 ```
+
 here we will see that the string cannot be converted to an integer because cat is not a number, whereas in the previous example, even tho we had a string of "1" we still are able to cast it as an integer because 1 is a castable number.
 
-
 ## 3. User Input ✔️
+
+```python
+user_name = input("What is your name?: ")
+print(f"Hello {user_name}!")
+```
+
+#### Output:
+
+![alt text](img\image-1.png)
+
+![alt text](img\image-1.png)
+
+![alt text](img\image-2.png)
 
 ## 4. Math and Arithmetic ✔️
 
@@ -191,7 +213,28 @@ if number_1 == 1 :
 This is number 1
 ```
 
-## 6. Logical Operators
+## 6. Logical Operators ✔️
+
+```python
+number_1 = 1
+number_2 = -1
+if number_1 > 0 :
+    print("This Number is Greater than 0")
+if number_2 < 0 :
+    print("This Number is Less than 0")
+if number_1 < 10:
+    print("This number is less than 10")
+if number_2 >= 1:
+    print("This number is greater than or equal to 1")
+```
+
+#### Output:
+
+```
+This Number is Greater than 0
+This Number is Less than 0
+This number is less than 10
+```
 
 ## 7. Conditional Expressions ✔️
 
@@ -258,7 +301,6 @@ o
 g
 ```
 
-
 ## 10. Format Specifiers ✔️
 
 ```python
@@ -269,8 +311,6 @@ item_2_price = 7.6
 
 print(f"The first item is {item_1} and it costs ${item_1_price:.2f}")
 print(f"The second item is {item_2} and it costs ${item_2_price:.2f}")
-
-
 ```
 
 #### Output:
@@ -279,7 +319,6 @@ print(f"The second item is {item_2} and it costs ${item_2_price:.2f}")
 The first item is milk and it costs $5.00
 The second item is eggs and it costs $7.60
 ```
-
 
 ## 11. While Loops ✔️
 
@@ -306,6 +345,7 @@ while game_running:
         game_running = False
         break
 ```
+
 #### Output:
 
 ```
@@ -334,6 +374,7 @@ hello
 ```
 
 ## 13. Nested Loops ✔️
+
 ```python
 suits = ("♥️","♦️","♣️","♠️")
 ranks = ("2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A")
@@ -345,9 +386,8 @@ for rank in ranks:
 #### Output:
 
 ```
-2♥️ 2♦️ 2♣️ 2♠️ 3♥️ 3♦️ 3♣️ 3♠️ 4♥️ 4♦️ 4♣️ 4♠️ 5♥️ 5♦️ 5♣️ 5♠️ 6♥️ 6♦️ 6♣️ 6♠️ 7♥️ 7♦️ 7♣️ 7♠️ 8♥️ 8♦️ 8♣️ 8♠️ 9♥️ 9♦️ 9♣️ 9♠️ 10♥️ 10♦️ 10♣️ 10♠️ J♥️ J♦️ J♣️ J♠️ Q♥️ Q♦️ Q♣️ Q♠️ K♥️ K♦️ K♣️ K♠️ A♥️ A♦️ A♣️ A♠️ 
+2♥️ 2♦️ 2♣️ 2♠️ 3♥️ 3♦️ 3♣️ 3♠️ 4♥️ 4♦️ 4♣️ 4♠️ 5♥️ 5♦️ 5♣️ 5♠️ 6♥️ 6♦️ 6♣️ 6♠️ 7♥️ 7♦️ 7♣️ 7♠️ 8♥️ 8♦️ 8♣️ 8♠️ 9♥️ 9♦️ 9♣️ 9♠️ 10♥️ 10♦️ 10♣️ 10♠️ J♥️ J♦️ J♣️ J♠️ Q♥️ Q♦️ Q♣️ Q♠️ K♥️ K♦️ K♣️ K♠️ A♥️ A♦️ A♣️ A♠️
 ```
-
 
 ## 14. Lists, Sets, and Tuples ✔️
 
@@ -362,156 +402,111 @@ my_tuple = ()
 ## 16. Dictionaries ✔️
 
 ## 17. Random Numbers ✔️
+Pythons random module has several useful methods for creating "psuedo-randomness." These are some of the most useful ones.
 
 ```python
-import random
-
-class Gun :
-    def __init__(self, name, tier, damage, accuracy):
-        self.name = name
-        self.tier = tier
-        self.damage = damage
-        self.accuracy = accuracy
-
-def rand_tier():
-    rng = random.uniform(1,100)
-    if rng <= 60:
-        tier = "Tier 1 ⬜"
-    elif rng > 60 and rng <= 90:
-        tier = "Tier 2 🟩"
-    elif rng >= 90 and rng <= 99.8:
-        tier = "Tier 3 🟪"
-    else :
-        tier = "Tier 4 🟨"
-    return tier
-
-
-def rand_damage(tier):
-    if tier == "Tier 1 ⬜":
-        dmg = random.randint(50, 75)
-    elif tier == "Tier 2 🟩":
-        dmg = random.randint(60, 85)
-    elif tier == "Tier 3 🟪":
-        dmg = random.randint(75, 100)
-    elif tier == "Tier 4 🟨":
-        dmg = random.randint(90, 115)
-    return dmg
-
-
-def rand_name(tier):
-    if tier == "Tier 1 ⬜":
-        prefix = ("Luxurious", "Big", "Strange", "Lucky", "Garbled",
-                  "Melted", "Singin'", "Spittin'", "Hardy", "Shining")
-        suffix = ("Rattler", "Chungus", "Smidge", "Trickler", "Bronson",
-              "Revolt", "Lux", "Repo", "Sidekick", "Stranger")
-    elif tier == "Tier 2 🟩":
-        prefix = ("Majestic", "Grand", "Equalized", "Enlarged", "Anticipated",
-                  "Solid", "Swarmin'", "Heavy", "Handy", "Blazin'")
-        suffix = ("Zinger", "Hunger", "Randall", "Blaster", "Boom-Stick",
-              "Mulcher", "Mako", "Tsunami", "Alien", "Chunker")
-    elif tier == "Tier 3 🟪":
-        prefix = ("Marvelous", "Splendid", "Surreal", "Benevolent", "Mighty",
-                  "Atrocious", "Nocturnal", "Enamored", "Rock-Solid", "Hardcore")
-        suffix = ("Rattle-Snake", "Honeybee", "Queen", "Dragon", "Jackyl",
-              "Bane", "Keepsake", "Charlie", "Merry-Go-Round", "Trickster")    
-    elif tier == "Tier 4 🟨":
-        prefix = ("Glamorous", "Impeccable", "Gleaming", "Grandiose", "Enduring",
-                  "Slick", "Impervious", "Inevitable", "Heavy-Metal", "Gorgeous")
-        suffix = ("Brimstone", "Ruby", "Dagger", "Ocean", "Circus",
-                  "Fairy-Tale", "Skullcracker", "Harold", "Waverider", "Baron")
-    rng_suf = random.choice(suffix)
-    rng_pref = random.choice(prefix)
-    full_name = f"{rng_pref} {rng_suf}"
-    return full_name
-
-
-def rand_accuracy(tier):
-    if tier == "Tier 1 ⬜":
-        acc = random.randint(60, 75)
-    elif tier == "Tier 2 🟩":
-        acc = random.randint(70, 85)
-    elif tier == "Tier 3 🟪":
-        acc = random.randint(80, 100)
-    elif tier == "Tier 4 🟨":
-        acc = random.randint(90, 100)
-    return acc
-
-
-def add_gun():
-    rolled_tier = rand_tier()
-    rolled_damage = rand_damage(rolled_tier)
-    rolled_accuracy = rand_accuracy(rolled_tier)
-    rolled_name = rand_name(rolled_tier)
-    rolled_gun = Gun(rolled_name, rolled_tier, rolled_damage, rolled_accuracy)
-    return rolled_gun
-
-list_of_guns = []
-
-for i in range(10):
-    rolled_gun = add_gun()
-    list_of_guns.append(rolled_gun)
-
-for gun in list_of_guns:
-    print(f"----{gun.name}----")
-    print(f"{gun.tier}\nDamage: {gun.damage}\nAccuracy: {gun.accuracy}%")
-    print("-----------------")
-
+random.choice(sequence) # returns a random element from a sequence
+random.shuffle(sequence) # returns a shuffled sequence from a given sequence
+random.randint(a, b) # returns an integer between a specified range where both ints are inclusive
+random.randrange(start, stop, step) # returns integer between start and stop where stop is exclusive and can be stepped
+random.random() # returns a random number between 1 and 0 and does not take an argument
+random.uniform(a, b) # returns a random float between 2 numbers where both are inclusive
+random.sample(sequence, k) # returns a list with a specified number of random items from a sequence where k = number of items returned
 ```
+Here is an example of something fun you can do with ranomness. Here were just randomizing a float between 1 and 100 and creating a percentage chance for each tier. 
+```python
+import random
+t1 = 0
+t2 = 0
+t3 = 0
+t4 = 0
+for i in range(10):
+    rng = random.uniform(1, 100)
+    if rng <= 60:
+        tier = "Tier 1 ⬜ | 60% Chance"
+        t1 += 1
+    elif rng > 60 and rng <= 90:
+        tier = "Tier 2 🟩 | 30% Chance"
+        t2 += 1
+    elif rng >= 90 and rng <= 99.8:
+        tier = "Tier 3 🟪 | 9.8% Chance"
+        t3 += 1
+    else:
+        tier = "Tier 4 🟨 | 0.2% Chance"
+        t4 += 1
+    print(tier)
+print("===FINAL COUNT===")
+print(f"Tier 1 ⬜ : {t1}")
+print(f"Tier 2 🟩 : {t2}")
+print(f"Tier 3 🟪 : {t3}")
+print(f"Tier 4 🟨 : {t4}")
+```
+
 #### Output:
 
 ```
-----Handy Chunker----
-Tier 2 🟩
-Damage: 71
-Accuracy: 75%
------------------
-----Shining Chungus----
-Tier 1 ⬜
-Damage: 54
-Accuracy: 69%
------------------
-----Mighty Charlie----
-Tier 3 🟪
-Damage: 89
-Accuracy: 85%
------------------
-----Singin' Chungus----
-Tier 1 ⬜
-Damage: 57
-Accuracy: 63%
------------------
-----Luxurious Chungus----
-Tier 1 ⬜
-Damage: 51
-Accuracy: 71%
------------------
-----Luxurious Sidekick----
-Tier 1 ⬜
-Damage: 71
-Accuracy: 70%
------------------
-----Handy Chunker----
-Tier 2 🟩
-Damage: 72
-Accuracy: 81%
------------------
-----Singin' Revolt----
-Tier 1 ⬜
-Damage: 69
-Accuracy: 67%
------------------
-----Blazin' Alien----
-Tier 2 🟩
-Damage: 60
-Accuracy: 71%
------------------
-----Spittin' Lux----
-Tier 1 ⬜
-Damage: 71
-Accuracy: 66%
------------------
+Tier 3 🟪 | 9.8% Chance
+Tier 1 ⬜ | 60% Chance
+Tier 1 ⬜ | 60% Chance
+Tier 2 🟩 | 30% Chance
+Tier 2 🟩 | 30% Chance
+Tier 1 ⬜ | 60% Chance
+Tier 1 ⬜ | 60% Chance
+Tier 1 ⬜ | 60% Chance
+Tier 1 ⬜ | 60% Chance
+Tier 1 ⬜ | 60% Chance
+===FINAL COUNT===
+Tier 1 ⬜ : 7
+Tier 2 🟩 : 2
+Tier 3 🟪 : 1
+Tier 4 🟨 : 0
 ```
+if you run this several times you wil get a different outcome everytime and a very low chance at getting a tier 4 but eventually if you run it enough you will get a tier 4. You could also cheese it and just put like 1000 in the for loop range and see how many you get. (I ran this 1000 times and this was the outcome)
+
+```
+===FINAL COUNT===
+Tier 1 ⬜ : 602
+Tier 2 🟩 : 293
+Tier 3 🟪 : 102
+Tier 4 🟨 : 3
+```
+
 ## 18. Functions ✔️
+```python
+def do_this():
+    print("doing this")
+
+def do_that():
+    print("doing that")
+
+do_this()
+do_that()
+```
+
+#### Output:
+
+```
+doing this
+doing that
+```
+
+```python
+def do_this(task):
+    print(f"doing this {task}")
+
+def do_that(task):
+    print(f"doing that {task}")
+
+do_this("sweeping")
+do_that("laundry")
+```
+
+#### Output:
+
+```
+doing this sweeping
+doing that laundry
+```
 
 ## 19. Default Arguments 🟥
 
