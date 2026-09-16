@@ -49,7 +49,8 @@
 - [45. Dates & Times](#45-dates--times)
 - [46. Multithreading](#46-multithreading)
 - [47. Request API Data](#47-request-api-data)
-- [48. PyQt5](#48-pyqt5)
+- [48. Virtual Environments (venv)](#48-virtual-envirnoments-venv)
+- [49. PyQt5](#48-pyqt5)
 
 ## 1. Variables ✔️
 
@@ -566,4 +567,23 @@ doing that laundry
 
 ## 47. Request API data
 
-## 48. PyQt5
+## 48. Virtual Envirnoments (venv)
+
+To create Virtual Environment for Windows
+```
+python -m venv env
+```
+To active the Virtual Environment
+```
+env/Scripts/activate
+```
+To create a requirements.txt file
+```
+pip freeze > requirements.txt
+```
+To install requirements from requirments.txt file
+```
+pip install -r requirements.txt
+```
+
+## 49. PyQt5
