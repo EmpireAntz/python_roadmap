@@ -587,3 +587,43 @@ pip install -r requirements.txt
 ```
 
 ## 49. PyQt5
+```python
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt5.QtGui import QIcon, QFont
+from PyQt5.QtCore import Qt
+
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Scuffedex")
+        self.setGeometry(0, 0, 500, 500)
+        self.setWindowIcon(QIcon("img/scuffeball.png"))
+        label = QLabel("Hello There", self)
+        label.setFont(QFont("Arial", 50))
+        label.setGeometry(0, 0, 500, 100)
+        label.setStyleSheet("color: pink;"
+                            "background-color: black;"
+                            "font-weight: bold;")
+        
+        # label.setAlignment(Qt.AlignTop)  
+        # label.setAlignment(Qt.AlignBottom) 
+        # label.setAlignment(Qt.AlignRight)
+        # label.setAlignment(Qt.AlignLeft)
+        # label.setAlignment(Qt.AlignVCenter) # Vertical Center
+        # label.setAlignment(Qt.AlignHCenter) #Horizontal Center
+        # label.setAlignment(Qt.AlignCenter) #Both Vertical and Horizontal
+
+
+def main():
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+
+
+if __name__ == "__main__":
+    main()
+```
+
