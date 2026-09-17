@@ -50,7 +50,7 @@
 - [46. Multithreading](#46-multithreading)
 - [47. Request API Data](#47-request-api-data)
 - [48. Virtual Environments (venv)](#48-virtual-envirnoments-venv)
-- [49. PyQt5](#48-pyqt5)
+- [49. PyQt5](#49-pyqt5)
 
 ## 1. Variables ✔️
 
